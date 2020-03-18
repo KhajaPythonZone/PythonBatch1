@@ -1,7 +1,9 @@
 import os
 import json
+import argparse
+import subprocess
 
-def scan_all_directories(root_folder='C:\\'):
+def scan_all_directories(root_folder='C:\\Program Files'):
     """
     This function is used to scan all the directories in the root folder
     to identify executables. 
@@ -66,8 +68,43 @@ def read_and_load():
         exe_map =  json.load(reader)
     return exe_map
 
-exe_map = read_and_load()
-      
-   
+def launch_application(app, exe_map):
+    """
+    This function will launch application
+
+    Parameters:
+        app (str): name of the application
+        exe_map (dict): executable map
+
+    Returns:
+        True if the application is found False otherwise
+    """
+    if app not in exe_map.keys():
+        print(f"""Application {app} not found.
+         If it is present and not showing, 
+         please complete the scan""")
+        return False
+    subprocess.Popen(exe_map[app])
+    return True
 
 
+
+# This parser will help in parsing arguments
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    '-s', '--scan', 
+    help="This will scan all the directories for executables",
+    action='store_true')
+parser.add_argument(
+    '-l', '--launch', help="This will launch an executable entered")
+
+args = parser.parse_args()
+exe_map = dict()
+if args.scan:
+    scan_and_save()
+else:
+    exe_map = read_and_load()
+    pass
+
+if args.launch:
+    launch_application(args.launch, exe_map)
