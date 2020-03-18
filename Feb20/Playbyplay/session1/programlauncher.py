@@ -97,6 +97,18 @@ parser.add_argument(
     action='store_true')
 parser.add_argument(
     '-l', '--launch', help="This will launch an executable entered")
+parser.add_argument(
+    '-a', '--alias', help= "Alias for current application",
+    action="store_true"
+)
+
+parser.add_argument(
+    '-o', '--old', help='Existing App name'
+)
+
+parser.add_argument(
+    '-n', '--new', help='New App Name' 
+)
 
 args = parser.parse_args()
 exe_map = dict()
@@ -108,3 +120,13 @@ else:
 
 if args.launch:
     launch_application(args.launch, exe_map)
+
+if args.alias:
+    old_app = args.old
+    if old_app not in exe_map.keys():
+        print("Invalid old name")
+        exit(1)
+    else:
+        exe_map[args.new] = exe_map[old_app]
+        save_exe_map(exe_map)
+

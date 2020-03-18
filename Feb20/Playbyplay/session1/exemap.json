@@ -6,6 +6,7 @@
     "aws_completer": "C:\\Program Files\\Amazon\\AWSCLIV2\\aws_completer.exe",
     "BCClipboard": "C:\\Program Files\\Beyond Compare 4\\BCClipboard.exe",
     "BComp": "C:\\Program Files\\Beyond Compare 4\\BComp.exe",
+    "BeyondCompare": "C:\\Program Files\\Beyond Compare 4\\BCompare.exe",
     "BCompare": "C:\\Program Files\\Beyond Compare 4\\BCompare.exe",
     "Patch": "C:\\Program Files\\Beyond Compare 4\\Patch.exe",
     "PdfToText": "C:\\Program Files\\Beyond Compare 4\\PdfToText.exe",
@@ -804,5 +805,6 @@
     "Wondershare Helper Compact": "C:\\Program Files\\Wondershare\\Filmora9\\Wondershare Helper Compact.exe",
     "WsChrome": "C:\\Program Files\\Wondershare\\Filmora9\\WsChrome.exe",
     "WSResDownloader": "C:\\Program Files\\Wondershare\\Filmora9\\WSResDownloader.exe",
-    "WveVerifier": "C:\\Program Files\\Wondershare\\Filmora9\\WveVerifier.exe"
+    "WveVerifier": "C:\\Program Files\\Wondershare\\Filmora9\\WveVerifier.exe",
+    "7zip": "C:\\Program Files\\7-Zip\\7z.exe"
 }
