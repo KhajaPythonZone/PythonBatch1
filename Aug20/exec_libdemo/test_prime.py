@@ -3,7 +3,14 @@ class Prime:
         self.number = number
 
     def is_prime(self):
-        pass
+        is_prime_number = True
+        index = 2
+        while(index < self.number//2):
+            if self.number%index == 0:
+                is_prime_number = False
+                break
+            index = index+1
+        return is_prime_number
 
 def main():
     value = 11
