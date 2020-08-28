@@ -1,5 +1,6 @@
 from common.compare import Compare
 from models.library_items import Book, Dvd
+from utilities.database.nosql.cassandra import Cassandra
 
 # dummy code
 compare_obj = Compare()

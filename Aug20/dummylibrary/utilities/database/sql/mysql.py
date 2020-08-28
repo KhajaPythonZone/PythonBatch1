@@ -1,0 +1,2 @@
+class MySql:
+    pass
