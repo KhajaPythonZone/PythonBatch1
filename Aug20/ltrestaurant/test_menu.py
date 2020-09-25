@@ -1,5 +1,6 @@
 import pytest
 
+from exceptions import MenuItemNotFoundException
 from menu import Menu
 
 
@@ -21,7 +22,7 @@ def test_menu_item_negative():
     """
     my_menu = Menu()
     my_menu.add_item(name='Tea', price=25.00)
-    with pytest.raises(KeyError):
+    with pytest.raises(MenuItemNotFoundException):
         my_menu.get_price(name='Coffee')
 
 
