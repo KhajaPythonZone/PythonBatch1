@@ -13,7 +13,6 @@ def test_menu_creation():
     assert price == 25.00
 
 
-@pytest.mark.skip(reason="We need to learn Exception Handling")
 def test_menu_item_negative():
     """
     This test method will test the menu creation as
@@ -22,7 +21,8 @@ def test_menu_item_negative():
     """
     my_menu = Menu()
     my_menu.add_item(name='Tea', price=25.00)
-    price = my_menu.get_price(name='Coffee')
+    with pytest.raises(KeyError):
+        my_menu.get_price(name='Coffee')
 
 
 def test_menu_item_update():
