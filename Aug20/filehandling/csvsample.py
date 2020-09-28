@@ -16,13 +16,13 @@ if __name__ == "__main__":
     menu_file_path = "menu.csv"
     sno = 0
     header = "sno,name,price\n"
+
     csv_fileobj = open(menu_file_path, 'wt')
     try:
-        csv_fileobj.write(header)
+        print("sno", "name", "price", sep=',',end='\n', file=csv_fileobj)
         for name, price in sample_items.items():
             sno += 1
-            item_format = f"{sno},{name},{price}\n"
-            csv_fileobj.write(item_format)
+            print(sno,name,price,sep=',',end='\n', file=csv_fileobj)
     finally:
         csv_fileobj.close()
         
