@@ -1,0 +1,2 @@
+Trying to write python objects to file
+10,20,30
