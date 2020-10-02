@@ -1,0 +1,11 @@
+{
+    "snacks": {
+        "Idly": 25.0,
+        "Tea": 20.0,
+        "Coffee": 22.0
+    },
+    "maincourse": {
+        "SouthIndianCombo": 100.0,
+        "NorthIndianCombo": 105.0
+    }
+}
