@@ -1,7 +1,7 @@
 from vehicles import vehicle
 
 
-class Car(vehicle.Vehicle):
+class Car(vehicle.Vehicle,):
     """
     This class represents a car
     """
